@@ -4,7 +4,7 @@ import io
 import re
 import subprocess
 import sys
-
+from subprocess import TimeoutExpired
 from six import raise_from, string_types
 
 from .config import Config
