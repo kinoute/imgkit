@@ -241,8 +241,7 @@ class IMGKit:
             stdout, stderr = result.communicate(input=string, timeout=30)
         except TimeoutExpired:
             result.kill()
-            outs, errs = result.communicate()
-            raise OSError('Timeout from subprocess %s', errs)
+            raise OSError('Timeout from subprocess')
         stderr = stderr or stdout
         stderr = stderr.decode("utf-8")
         exit_code = result.returncode
