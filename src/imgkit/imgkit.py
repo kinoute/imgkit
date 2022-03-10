@@ -238,7 +238,7 @@ class IMGKit:
         else:
             string = None
         try:
-            stdout, stderr = result.communicate(input=string, timeout=30)
+            stdout, stderr = result.communicate(input=string, timeout=45)
         except TimeoutExpired:
             result.kill()
             raise OSError('Timeout from subprocess')
